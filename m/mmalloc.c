@@ -11,6 +11,9 @@ mmalloc(int size)
 {
     if (MMALLOC_HEAD == NULL) {
         MMALLOC_HEAD = malloc(sizeof(MMallocReference));
+        MMALLOC_HEAD->ptr = NULL;
+        MMALLOC_HEAD->references = 1;
+        MMALLOC_HEAD->next = NULL;
         MMALLOC_CURSOR = MMALLOC_HEAD;
     }
     void *new = malloc(size);
