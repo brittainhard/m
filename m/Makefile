@@ -6,7 +6,7 @@ SOURCE= m.c
 CC= gcc
 DEPS= mmalloc.o
 
-all: clean mentat
+all: clean m
 
 m: $(DEPS)
 	$(CC) $(CFLAGS) $(SOURCE) -o $(EXE) $(DEPS)
@@ -16,3 +16,6 @@ mdebug: $(DEPS)
 
 clean:
 	rm -rf mbin a.out *.o
+
+default: m
+test: mdebug

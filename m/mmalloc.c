@@ -1,5 +1,8 @@
 #include "mmalloc.h"
 
+// Not literal count of references but a struct for capturing all the pointers
+// to that reference?
+
 typedef struct MMallocReference {
     void *ptr;
     int references;
