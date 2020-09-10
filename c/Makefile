@@ -1,6 +1,6 @@
 DEBUG_FLAGS= -Wall -g
 CFLAGS= 
-EXE= mbin
+EXE= m
 TEST_EXE= a.out
 SOURCE= m.c
 CC= gcc
